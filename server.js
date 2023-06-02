@@ -18,7 +18,7 @@ import cheerio from 'cheerio';
 
     for (let card of cards) {
         const fileName = `images/${card?.index}.png`;
-        await captureWebsite.file('https://bento.me/estebanjs', fileName, {
+        await captureWebsite.file(url, fileName, {
             defaultBackground: false,
             element: `.bento-grid__item:nth-child(${card?.index + 1})`
         });
